@@ -39,6 +39,7 @@ function App() {
                     <Navbar/>
                     <LeftMenu/>
                     <MobileMenu/>
+                    
                     <Routes>
                         <Route path="/" element={<LandingPage/>}/>
                         <Route path="/home" element={<Home/>}/>
