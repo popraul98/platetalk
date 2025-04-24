@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/*!* Fundalul global pentru întreaga aplicație *!*/
+.app-background {
+    background: linear-gradient(0deg, #111827 0%, #192e50 100%);
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/*!* Stil pentru SVG-ul de fundal *!*/
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/*!* Asigurăm că conținutul este deasupra fundalului *!*/
+/*.app-content {*/
+/*  position: relative;*/
+/*  z-index: 1;*/
+/*}*/
+
+
+.registration-ui {
+    background: #fff;
+    padding: .25em .25em .25em 1.55em;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 1px #ddd;
+    position: relative;
+    font-family: helvetica, ariel, sans-serif;
+}
+
+.registration-ui:before {
+    content: 'RO';
+    display: block;
+    width: 21px;
+    height: 100%;
+    background: #063298;
+    position: absolute;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+    color: #fff;
+    font-size: .5em;
+    line-height: 41px;
+    padding-left: 5px;
+}
+
+.registration-ui:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    border: 1px dashed #f8d038;
+}
+
+/*!* Ajustăm Navbar-ul pentru a fi fix *!*/
+nav {
+    position: fixed !important; /* Fixăm Navbar-ul în partea de sus */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50; /* Asigurăm că Navbar-ul este deasupra conținutului */
+    background: rgba(30, 58, 138, 0.8) !important; /* Albastru semi-transparent */
+    backdrop-filter: blur(3px); /* Efect de blur */
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* fixed width only on sm and up */
+@media (min-width: 640px) {
+    .w-fixed {
+        flex: 0 1 230px;
+        min-width: 230px;
+    }
+}
