@@ -3,17 +3,17 @@ import {persistStore, persistReducer} from "redux-persist";
 import storage from 'redux-persist/lib/storage';
 
 import userReducer from '../store/userSlice.js';
-import postsReducer from '../store/postsSlice.js';
+import countyReducer from '../store/countySlice.js';
 
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ['userData','postsData']
+    whitelist: ['userData','county']
 };
 
 const rootReducer = combineReducers({
     userData: userReducer,
-    postsData: postsReducer,
+    county: countyReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

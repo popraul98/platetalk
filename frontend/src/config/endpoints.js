@@ -4,6 +4,7 @@ export const LOGOUT = "http://127.0.0.1:8000/api/logout";
 
 
 export const GET_ALL_POSTS = "http://127.0.0.1:8000/api/posts"
+export const GET_COUNTIES_LIST = "http://127.0.0.1:8000/api/counties-list"
 
 
 

@@ -21,4 +21,9 @@ class NumberPlate extends Model
     {
         return $this->belongsToMany(User::class);
     }
+    
+    public function getCounty()
+    {
+        return $this->belongsTo(County::class);
+    }
 }
